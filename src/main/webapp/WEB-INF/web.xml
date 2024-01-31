@@ -11,8 +11,16 @@
             <param-value>nomParDefaut</param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>configServelet</servlet-name>
+        <servlet-class>com.ceri.servelet.ConfigServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>helloServelet</servlet-name>
         <url-pattern>/hello-servelet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>configServelet</servlet-name>
+        <url-pattern>/config-servelet</url-pattern>
     </servlet-mapping>
 </web-app>

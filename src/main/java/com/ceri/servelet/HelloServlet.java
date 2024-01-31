@@ -27,7 +27,7 @@ public class HelloServlet extends HttpServlet {
         String serveletName = getServletName();
         if(parameterNom.isEmpty())
         {
-            parameterNom = getInitParameter("nom");
+            parameterNom = getServletContext().getAttribute("nom").toString();
         }
         if(parameterNom == null && parameterPrenom == null)
             ou.println("hello world from servlet, no parameter yet");
