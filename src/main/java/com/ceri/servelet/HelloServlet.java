@@ -11,7 +11,11 @@ public class HelloServlet extends HttpServlet {
             throws IOException {
 
         PrintWriter ou = response.getWriter();
-        ou.println("hello world from servlet");
+        String parameter = request.getParameter("name");
+        if(parameter == null)
+            ou.println("hello world from servlet, no parameter yet");
+        else
+            ou.println("hello world from servlet, your name is : " + parameter);
     }
 
 }
