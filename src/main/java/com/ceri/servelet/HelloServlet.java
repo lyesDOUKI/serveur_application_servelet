@@ -30,7 +30,6 @@ public class HelloServlet extends HttpServlet {
         else {
             ou.println("hello world from servlet, POST method, ton nom : " + parameterNom
                     + " et ton prénom : " + parameterPrenom);
-            ou.println("<br>");
             ou.println("Le nom de la servlet est : " + serveletName);
         }
     }
