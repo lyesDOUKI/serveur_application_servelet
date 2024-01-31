@@ -6,6 +6,10 @@
     <servlet>
         <servlet-name>helloServelet</servlet-name>
         <servlet-class>com.ceri.servelet.HelloServlet</servlet-class>
+        <init-param>
+            <param-name>nom</param-name>
+            <param-value>nomParDefaut</param-value>
+        </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>helloServelet</servlet-name>
