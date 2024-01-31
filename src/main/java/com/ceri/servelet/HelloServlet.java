@@ -21,13 +21,18 @@ public class HelloServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
         PrintWriter ou = response.getWriter();
-        ////question 4
+        ////question 6 affichage nom servelet
         String parameterNom = request.getParameter("nom");
         String parameterPrenom = request.getParameter("prenom");
+        String serveletName = getServletName();
         if(parameterNom == null && parameterPrenom == null)
             ou.println("hello world from servlet, no parameter yet");
-        else
-            ou.println("hello world from servlet, POST method, ton nom : " + parameterNom + " et ton prénom : " + parameterPrenom);
+        else {
+            ou.println("hello world from servlet, POST method, ton nom : " + parameterNom
+                    + " et ton prénom : " + parameterPrenom);
+            ou.println("<br>");
+            ou.println("Le nom de la servlet est : " + serveletName);
+        }
     }
 
 
